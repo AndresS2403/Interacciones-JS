@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-width: 100vh;
+    background: url(../img/fondo.jpg);
+    background-size: cover;
+}
+
+section{
+    width: 90%;
+    margin: 100px auto;
+    border: 4px solid #302e4d;
+    background: #302e4da9;
+    border-radius: 30px;
+    padding: 40px;
+    display: flex;
+}
+
+h2{
+    color: #65a4cc;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 20px;
+    border-bottom: 5px solid grey;
+    text-transform: uppercase;
+    font-family: 'Glass Antiqua', cursive;
+}
+
+.left, .right{
+    width: 50%;
+    text-align: center;
+    border: 3px solid sandybrown;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+button{
+    padding: 10px 30px;
+    background: #e46825;
+    color: #302e4d;
+    font-family: 'Glass Antiqua', cursive;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 0 20px 0 20px;
+    border: 1px solid gray;
+    transition: .5s;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 0 12px 3px ;
+}
+
+button:hover{
+    transform: scale(1.1);
+    border-radius: 20px 0 20px 0;
+    background: #F4F1BB;
+    color: #302e4d;
+}
+
+#figura{
+    width: 200px;
+    height: 200px;
+    background: orangered;
+    border: 10px solid orange;
+    margin: 40px auto;
+    transition: .9s;
+}
+
+/*Circulo*/
+#figura.circulo{
+    border-radius: 50%;
+    background: orange;
+    border: 10px solid orangered;
+    transform: rotate(-360deg);
+}
+/*Triangulo*/
+#figura.triangulo{
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-right: 100px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 150px solid orange;
+}
+
+/*Rectangulo*/
+#figura.rectangulo{
+    width: 250px;
+    height: 100px;
+    border: 10px solid orangered;
+    background: orange;
+}
+
+/*Rombo*/
+#figura.rombo{
+    width: 200px;
+    height: 200px;
+    border: 10px solid orangered;
+    background: orange;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*Imagen*/
+#figura.imagen{
+    width: 300px;
+    height: 300px;
+    background: url(../img/Guts-imagen.jpg);
+    background-size: cover;
+    border: 3px solid orange;
+    margin: 40px auto;
+    transition: .5s;
+}
+
+/*GIF*/
+#figura.Gif{
+    width: 350px;
+    height: 200px;
+    background: url(../img/berserk.gif);
+    background-size: cover;
+    border: 3px solid orange;
+    margin: 40px auto;
+}
+
+/*Hoja*/
+#figura.hoja{
+    width: 150px;
+    height: 100px;
+    -moz-border-radius:0 40% / 0 100%;
+    -webkit-border-radius:0 40% / 0 100%;
+    border-radius: 0 50% / 0 100%;
+    background: orangered;
+    border: 3px solid orange;
+}
+
+#figura.pacman{
+    width:0; 
+    height:0; 
+    background: transparent;
+    border-right: 100px solid transparent; 
+    border-top: 100px solid #ed6a5a; 
+    border-left: 100px solid #ed6a5a; 
+    border-bottom: 100px solid #ed6a5a; 
+    -moz-border-radius: 100%; 
+    -webkit-border-radius: 100%; 
+    border-radius: 100%;
+}
+
+/*Luna*/
+#figura.luna{
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    border: transparent;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 40px 10px 0 #f4f1bb;
+    -webkit-box-shadow: 40px 10px 0 #f4f1bb;
+    box-shadow: 40px 10px 0 #f4f1bb;
+}
+/*Huevo*/
+#figura.huevo {
+    width: 136px;
+    height: 200px;
+    border: #F4F1BB;
+    background-color: #F4F1BB;
+    -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    -webkit-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+/*Trapecio*/
+#figura.trapecio{
+    width: 250px;
+    height: 0px;
+    background: transparent;
+    border-top: transparent;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #e46825;
+}
+/*Mover izquierda*/
+#figura.moveLeft{
+    transform: translate(-50px);
+}
+
+/*Mover abajo*/
+
+#figura.moveBottom{
+    transform: translateY(50px);
+}
+
+/*Mover derecha*/
+#figura.moveRight{
+    transform: translate(50px);
+}
+
+/*Panel superior*/
+.panel-superior{
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    top: -400px;
+    width: 200px;
+    background: #F4F1BB;
+    text-align: center;
+    padding: 60px 30px;
+    width: 100%;
+    transition: 1s;
+}
+
+.panel-superior.active{
+    top: 0;
+}
+
+.panel-superior h2{
+    color: #302e4d;
+
+}
+
+.panel-superior a{
+    background: transparent;
+    border-bottom: 1px solid #302e4d;
+    color: #302e4d;
+    padding: 6px 20px;
+    display: block;
+    font-family: 'Glass Antiqua', cursive;
+    text-align: center;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: .4s;
+    cursor: pointer;
+
+}
+
+.panel-superior a:hover{
+    color: #302e4d;
+    background: #ed6a5a;
+    transform: scaleY(1.0);
+}
+
+.panel-superior a.close{
+    position: absolute;
+    right: 20px;
+    top:20px;
+    background: transparent;
+    color: #302e4d;
+    font-size: 20px;
+}
+
+/*Panel lateral*/
+.panel-lateral{
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    background: #F4F1BB;
+    text-align: center;
+    padding: 60px 30px;
+    height: 100vh;
+    transition: 1s;
+}
+
+.panel-lateral.active{
+    left: 0;
+}
+
+.panel-lateral h2{
+    color: #302e4d;
+
+}
+
+.panel-lateral a{
+    background: transparent;
+    border-bottom: 1px solid #302e4d;
+    color: #302e4d;
+    padding: 6px 20px;
+    display: block;
+    font-family: 'Glass Antiqua', cursive;
+    text-align: center;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: .4s;
+    cursor: pointer;
+
+}
+
+.panel-lateral a:hover{
+    color: #302e4d;
+    background: #ed6a5a;
+    transform: scaleY(1.0);
+}
+
+.panel-lateral a.close{
+    position: absolute;
+    right: 20px;
+    top:20px;
+    background: transparent;
+    color: #302e4d;
+    font-size: 20px;
+}
+
+/*Mover arriba*/
+#figura.moveUp{
+    transform: translateY(-50px);
+}
+
+
+/*Imagen de fondo*/
+
+#body.imagenFondo{
+    width: 100%;
+    min-width: 100vh;
+    background: url(../img/fondo2.jpg);
+    background-size: cover;
+    transition: all .2s;
+}
+
+
+/*Propuesta*/
+#figura.bandera{
+    width: 0px;
+    height: 250px;
+    background: transparent;
+    border-top: transparent;
+    border-left: 70px solid #ffffff;
+    border-right: 70px solid #1b8b11;
+    border-bottom: 55px solid transparent;
+}
+
+
+/*Cambiar Color principal*/
+#color.colorPrincipal{
+    width: 90%;
+    height: 90;
+    margin: 100px auto;
+    border: 4px solid #4a4d2e;
+    background: #718f06a9;
+    border-radius: 30px;
+    padding: 40px;
+    display: flex;
+}
